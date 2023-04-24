@@ -43,7 +43,7 @@ public with sharing class OpportunityTriggerHandler implements TriggerHandler {
     }
     
     private void afterUpdate(List<Opportunity> oldRecords, List<Opportunity> newRecords, Map<ID, Opportunity> oldRecordMap, Map<ID, Opportunity> newRecordMap){
-        opportunityService.closedOpportunities(oldRecords,newRecords, oldRecordMap,newRecordMap);
+        opportunityService.closedOpportunities(newRecords, oldRecordMap);
     }
     
 }
